@@ -10,7 +10,19 @@
 
 <body>
     <h1>User list</h1>
-    <p>{{insert_me}}</p>
+    {% if user_list %}
+
+    <div>
+        {% for user in user_list %}
+        <ul>
+            <li>First name : {{user.first_name}}</li>
+            <li>Last name : {{user.last_name}}</li>
+            <li>Email : {{user.email}}</li>
+        </ul>
+        {% endfor %}
+    </div>
+
+    {% endif %}
 </body>
 
 </html>
