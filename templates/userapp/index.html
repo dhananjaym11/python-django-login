@@ -10,6 +10,17 @@
 
 <body>
     <h1>Home page</h1>
+    <ul>
+        <li>
+            <a href="{% url 'userapp:user_form' %}">User Form</a>
+        </li>
+        <li>
+            <a href="{% url 'userapp:user_list' %}">User List</a>
+        </li>
+        <li>
+            <a href="{% url 'admin:index' %}">Admin</a>
+        </li>
+    </ul>
 </body>
 
 </html>
