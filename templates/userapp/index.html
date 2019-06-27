@@ -1,26 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+{% extends "userapp/base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
-</head>
-
-<body>
-    <h1>Home page</h1>
-    <ul>
-        <li>
-            <a href="{% url 'userapp:user_form' %}">User Form</a>
-        </li>
-        <li>
-            <a href="{% url 'userapp:user_list' %}">User List</a>
-        </li>
-        <li>
-            <a href="{% url 'admin:index' %}">Admin</a>
-        </li>
-    </ul>
-</body>
-
-</html>
+{% block body_block %}
+<h1>Home page</h1>
+<p>{{text | cut:'world' | upper}}</p>
+<p>Number is : {{number|add:11}}</p>
+{% endblock %}

@@ -4,7 +4,8 @@ from userapp.forms import NewUserForm
 # Create your views here.
 
 def index(request):
-    return render(request, 'userapp/index.html')
+    context_dict = {'text': 'Hello world', 'number': 100}
+    return render(request, 'userapp/index.html', context=context_dict)
     
 def user_list_view(request):
     user_list = User.objects.order_by('email')
